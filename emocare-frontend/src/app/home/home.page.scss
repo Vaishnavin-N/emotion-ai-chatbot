@@ -1,0 +1,137 @@
+.chat-page {
+  --background: linear-gradient(180deg, #f7f3ff 0%, #f3f6ff 100%);
+  padding: 20px;
+}
+
+.chat-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.chat-header h1 {
+  font-size: 28px;
+  color: #6d28d9;
+  margin: 0;
+}
+
+.chat-header p {
+  color: #7c7c95;
+  margin-top: 6px;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 8px 100px;
+}
+
+.chat-bubble {
+  max-width: 78%;
+  padding: 14px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.user-bubble {
+  align-self: flex-end;
+  background: #7c3aed;
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.bot-bubble {
+  align-self: flex-start;
+  background: white;
+  color: #333;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.chat-footer {
+  padding: 16px;
+  background: transparent;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 28px;
+  padding: 8px 10px 8px 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  gap: 10px;
+}
+
+.chat-input-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+}
+
+.mic-btn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Tick button */
+.tick-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Sound wave animation */
+.sound-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.sound-wave span {
+  display: inline-block;
+  width: 4px;
+  background: #7c3aed;
+  border-radius: 4px;
+  animation: wave 0.8s ease-in-out infinite;
+}
+
+.sound-wave span:nth-child(1) { height: 10px; animation-delay: 0s; }
+.sound-wave span:nth-child(2) { height: 20px; animation-delay: 0.1s; }
+.sound-wave span:nth-child(3) { height: 30px; animation-delay: 0.2s; }
+.sound-wave span:nth-child(4) { height: 20px; animation-delay: 0.3s; }
+.sound-wave span:nth-child(5) { height: 10px; animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(2); }
+}
