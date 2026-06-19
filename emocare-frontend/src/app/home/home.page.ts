@@ -27,7 +27,7 @@ export class HomePage {
     this.messages = [...this.messages, { role: 'user', content: userText }];
     this.userInput = '';
 
-    fetch('http://127.0.0.1:8000/chat', {
+    fetch('https://emotion-ai-chatbot-ttlw.onrender.com/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user_input: userText })
